@@ -1,0 +1,12 @@
+# Segredos e credenciais (nunca no repo)
+*.env
+*-api-key
+*token*.json
+client_secret*.json
+.DS_Store
+
+# Output de trabalho do utilizador (a pasta que as skills escrevem)
+clientes/
+leads.csv
+tracker.md
+scripts/

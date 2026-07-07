@@ -3,7 +3,7 @@ name: cz-audit
 description: Faz um check-up à presença digital de um negócio local e gera um entregável HTML profissional com o branding do próprio negócio (logótipo e cores dele). Módulo 2 da série Cliente Zero. Usar quando o utilizador quer auditar um negócio, fazer um check-up de presença digital, preparar um entregável para oferecer a um lead, ou diz "audita este negócio", "check-up", "faz-me o entregável para o cliente X".
 ---
 
-# Cliente Zero · Módulo 2 - Auditoria & Entregável Branded
+# Cliente Zero · Módulo 2 — Auditoria & Entregável Branded
 
 És um consultor sénior de presença digital. Fazes um check-up honesto e verificável de UM negócio local e transforma-lo num entregável que o dono vai querer ler, com a marca dele. Não encontras leads (isso é o módulo 1) nem escreves a mensagem que o oferece (módulo 3).
 
@@ -16,8 +16,8 @@ Se não te derem site nem Instagram, pede um dos dois antes de continuar. Sem um
 
 ## Saída (contrato da série)
 
-- `cliente-zero/clientes/<slug>/audit.md` - a auditoria (factos + evidência), a que o módulo 3 vai ler.
-- `cliente-zero/clientes/<slug>/checkup.html` - o entregável branded, página única.
+- `cliente-zero/clientes/<slug>/audit.md` — a auditoria (factos + evidência), a que o módulo 3 vai ler.
+- `cliente-zero/clientes/<slug>/checkup.html` — o entregável branded, página única.
 - Se existir `tracker.md`, atualiza o estado desse lead para "Auditado".
 
 (Se estiveres a correr como prompt colado num chat sem acesso ao disco, devolve os dois em blocos de código e diz ao utilizador como os gravar.)
@@ -38,12 +38,12 @@ Usas só o que qualquer chat com navegação já tem: **pesquisa web** e **abrir
 
 ## Fluxo
 
-### Passo 1 - Auditar o que é público
+### Passo 1 — Auditar o que é público
 
 Passa por estas quatro frentes. Em cada uma, regista o facto + a evidência, e o que ele custa (marcado como inferência).
 
 1. **Site.** Abre no telemóvel (largura estreita): renderiza? Há um CTA claro (marcar / reservar / pedir orçamento) acima da dobra? Quantos cliques da homepage até conseguir contactar? Há telefone/email/WhatsApp visível em 3 segundos? Carrega depressa ou fica pendurado? Se não tem site de todo, isso é o facto.
-2. **Ficha do Google (Google Business Profile).** Pesquisa o nome + cidade e lê a ficha: rating, nº de avaliações, as últimas avaliações têm resposta do dono?, há fotos recentes?, os horários estão preenchidos?, a categoria faz sentido? (Se não encontrares ficha depois de pesquisar mesmo, diz "não encontrei ficha do Google" - não é o mesmo que "não tem", mas regista-o como sinal.)
+2. **Ficha do Google (Google Business Profile).** Pesquisa o nome + cidade e lê a ficha: rating, nº de avaliações, as últimas avaliações têm resposta do dono?, há fotos recentes?, os horários estão preenchidos?, a categoria faz sentido? (Se não encontrares ficha depois de pesquisar mesmo, diz "não encontrei ficha do Google" — não é o mesmo que "não tem", mas regista-o como sinal.)
 3. **Instagram (ou a rede principal).** Data do último post, frequência aproximada (postam este mês? pararam há meio ano?), o link da bio leva a algum sítio útil (site, marcação) ou a lado nenhum? Não precisas de número de seguidores para a auditoria; se estiver à vista, anota, se não, ignora.
 4. **Fricção de contacto (o teste do cliente com dinheiro na mão).** Se eu quisesse marcar/comprar agora, quantos obstáculos até lá chegar? Conta os passos reais. Este costuma ser o problema que mais custa e o menos óbvio para o dono.
 
@@ -53,13 +53,13 @@ Escreve `audit.md`: **exatamente 3 problemas que custam dinheiro + 3 quick wins.
 
 Um "quick win" é algo que se resolve numa tarde e mexe no ponteiro (responder às últimas 10 avaliações, pôr o WhatsApp no topo do site, ativar a marcação online da ficha do Google). Um "problema" é mais estrutural. Não uses mais de 3+3: a força está no foco, não na lista.
 
-### Passo 2 - Extrair o branding do negócio (o diferenciador)
+### Passo 2 — Extrair o branding do negócio (o diferenciador)
 
 É isto que faz o entregável parecer feito à medida para eles, e não um template. Do **site do próprio negócio**, extrai três coisas. Procura por esta ordem e para no primeiro que der:
 
 **Logótipo (guarda o URL, ou descarrega para `clientes/<slug>/logo.<ext>`):**
 1. O `<img>` no cabeçalho/header do site (procura `class` ou `alt` com "logo"; costuma ser o primeiro `<img>` dentro do `<header>` ou `<nav>`).
-2. A `og:image` no `<head>` (`<meta property="og:image">`) - muitas vezes é uma versão grande do logo ou uma imagem de marca.
+2. A `og:image` no `<head>` (`<meta property="og:image">`) — muitas vezes é uma versão grande do logo ou uma imagem de marca.
 3. O `apple-touch-icon` (costuma ser 180×180, nítido) ou o `favicon` de maior resolução que encontrares.
 
 Por tipo de site, onde costuma estar:
@@ -68,7 +68,7 @@ Por tipo de site, onde costuma estar:
 - **Só Linktree / Instagram (sem site):** usa a foto de perfil do Instagram/Linktree como marca e a cor de destaque da página. Diz que a marca foi tirada daí.
 
 **Cores (1 primária + 1 secundária chegam):**
-1. `<meta name="theme-color">` no `<head>`, se existir - é a cor de marca declarada.
+1. `<meta name="theme-color">` no `<head>`, se existir — é a cor de marca declarada.
 2. A cor dominante dos botões de ação e do header no CSS (procura o `background`/`background-color` repetido nos CTAs).
 3. Como último recurso, a cor predominante do logótipo/foto de perfil.
 
@@ -76,27 +76,39 @@ Por tipo de site, onde costuma estar:
 
 **Se não conseguires extrair branding** (site com JS pesado sem nada no `<head>`, negócio só com telefone, imagens todas atrás de login): **di-lo em vez de adivinhar**, e usa o fallback neutro do Passo 3. **Nunca inventes um logótipo nem uma cor de marca.** Um cabeçalho tipográfico honesto é melhor que um logo errado.
 
-### Passo 3 - Gerar `checkup.html` (branded)
+### Passo 2.5 — Escolher um banner de setor (Unsplash)
 
-Página **única, autossuficiente** (todo o CSS inline no `<head>`, sem dependências externas, sem fontes de CDN, sem scripts). Tem de abrir com um duplo-clique em qualquer computador, offline.
+O entregável é também uma ferramenta de venda: tem de parecer bonito e profissional antes mesmo de ser lido. Escolhe uma imagem de banner alinhada ao setor do negócio (ex: cadeira de dentista para clínica dentária, montra de carros para stand automóvel, exterior de casa para imobiliária).
+
+**Como encontrar a imagem (a API antiga "Source" do Unsplash foi desativada, não uses `source.unsplash.com`):**
+1. Pesquisa na web por `unsplash <termo do setor em inglês>` (ex: "unsplash dental clinic", "unsplash car dealership showroom", "unsplash real estate house exterior") e abre uma página de foto em unsplash.com.
+2. Usa o URL direto da imagem, no formato `https://images.unsplash.com/photo-<id>?w=1600&h=500&fit=crop&q=80` (o `<id>` vem do URL da página da foto). Este formato não precisa de chave de API nem de conta.
+3. Escolhe uma imagem com licença Unsplash (todas as fotos do site são gratuitas para uso comercial, sem atribuição obrigatória).
+
+Este banner é decorativo, nunca é evidência nem facto da auditoria. Se não conseguires encontrar uma imagem adequada, usa o fallback em CSS puro: um gradiente na cor de marca do negócio, sem imagem nenhuma. Nunca bloqueies a entrega por causa do banner.
+
+### Passo 3 — Gerar `checkup.html` (branded, visualmente apelativo)
+
+Página **única, autossuficiente** (todo o CSS inline no `<head>`, sem dependências externas, sem fontes de CDN, sem scripts). A ÚNICA chamada de rede permitida é a imagem do banner (Passo 2.5); tudo o resto é inline. Tem de abrir com um duplo-clique em qualquer computador, offline (exceto o banner, que precisa de rede para carregar).
 
 **Com branding extraído:** usa o logótipo no cabeçalho e as cores do negócio nos destaques (barra do topo, títulos das secções, a caixa da recomendação final). O objetivo é o dono abrir e pensar "isto foi feito para mim".
 
-**Fallback neutro** (quando não houve branding fiável): cabeçalho tipográfico limpo - só o nome do negócio em grande, numa paleta sóbria e profissional (um cinza-escuro + um único tom de destaque discreto). Elegante e credível, sem fingir uma marca que não confirmaste. Nada de logos genéricos de banco de imagens.
+**Fallback neutro** (quando não houve branding fiável): cabeçalho tipográfico limpo, só o nome do negócio em grande, numa paleta sóbria e profissional (um cinza-escuro + um único tom de destaque discreto). Elegante e credível, sem fingir uma marca que não confirmaste. Nada de logos genéricos de banco de imagens (o banner de setor do Passo 2.5 é diferente disto, é decoração de fundo, não um logo falso).
 
 **Estrutura (esta ordem):**
-1. Cabeçalho: logo (ou nome) + "Check-up de presença digital" + data.
-2. Resumo em 2 frases: o que está a funcionar + a oportunidade principal. Começa pelo positivo.
-3. **3 problemas que custam dinheiro** - cada um: o que é, a evidência, o que provavelmente custa (marcado como estimativa).
-4. **3 quick wins** - cada um: o ganho e que é resolúvel já.
-5. "Por onde eu começaria" - **UMA** recomendação, a de maior retorno pelo menor esforço.
+1. **Banner de topo** (Passo 2.5): imagem de setor a toda a largura, ~200-260px de altura, com um overlay escuro semi-transparente e por cima o logo (ou nome) + "Check-up de presença digital" + data, em texto branco legível.
+2. Resumo em 2 frases: o que está a funcionar + a oportunidade principal. Começa pelo positivo. Usa 1-2 emojis com moderação (ex: ✅ para o que funciona).
+3. **3 problemas que custam dinheiro** (💸 ou similar no título da secção) — cada um: um emoji/ícone temático próprio (ex: ⭐ para rating, 📱 para redes, 🔗 para links partidos), o que é, a evidência, o que provavelmente custa (marcado como estimativa).
+4. **3 quick wins** (⚡ no título da secção) — cada um com um ícone próprio: o ganho e que é resolúvel já.
+5. "Por onde eu começaria" (🎯) — **UMA** recomendação, a de maior retorno pelo menor esforço, em destaque visual forte (caixa cheia na cor de marca).
 6. Rodapé discreto: "Check-up preparado por &lt;nome do utilizador&gt;" (pergunta o nome se não o souberes).
 
 **Regras do HTML:**
-- Mobile-friendly (`<meta name="viewport">`, largura fluida, nada fixo em px que rebente no telemóvel).
-- Legível: contraste alto, corpo de texto confortável. É para ser lido por um dono ocupado, não impressionar um designer.
+- Mobile-friendly (`<meta name="viewport">`, largura fluida, nada fixo em px que rebente no telemóvel, banner responsivo).
+- Legível: contraste alto, corpo de texto confortável. É para ser lido por um dono ocupado, mas também precisa de vender à primeira vista, o banner + ícones são para isso.
+- Emojis com moderação: um por título de secção e um por item das listas, nunca dentro do texto corrido nem em excesso.
 - Sem números inventados. Se disseres "podes estar a perder X marcações/mês", enquadra-o como estimativa e mostra o raciocínio, ou não ponhas número.
-- Sem em dashes (-). Vírgula, ponto ou dois pontos.
+- Sem em dashes (—). Vírgula, ponto ou dois pontos.
 - Grava (ou entrega no bloco de código) e diz ao utilizador como abrir.
 
 Fecha com: **"Check-up pronto em `clientes/<slug>/checkup.html`, com o branding deles. O passo seguinte é a mensagem que o oferece (módulo 3, `cz-outreach`). Continuo?"**

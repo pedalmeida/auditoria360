@@ -1,8 +1,8 @@
-# 🎯 Cliente Zero · Módulo 2 - Auditoria & Entregável Branded
+# 🎯 Cliente Zero · Módulo 2 — Auditoria 360 & Entregável Branded
 
-**Dá-lhe um negócio local (nome + site ou Instagram). Ele faz um check-up honesto à presença digital, encontra os problemas que custam dinheiro, e devolve-te um entregável HTML profissional com o logótipo e as cores do próprio negócio, pronto para ofereceres. Sem instalar nada, sem gastar um cêntimo, sem nenhuma API.**
+**Dá-lhe um negócio local (nome + site + cidade). Ele faz uma auditoria 360 honesta: o próprio site, a ficha do Google, o Instagram, se há anúncios ativos no Meta, e um benchmark contra 2-3 concorrentes diretos reais da mesma zona. Devolve-te um entregável HTML profissional com o logótipo e as cores do próprio negócio, com 3 separadores (os teus números / concorrentes / roadmap), pronto para ofereceres. Sem instalar nada, sem gastar um cêntimo, sem nenhuma API paga.**
 
-Encontrar o lead é metade do caminho (isso é o módulo 1). A outra metade é chegar com algo na mão em vez de um "olá, presto serviços de marketing". Este módulo faz-te esse presente: analisa o site, a ficha do Google e o Instagram do negócio, aponta 3 problemas que lhe estão a custar clientes e 3 quick wins, e embrulha tudo num `checkup.html` com a marca deles, para parecer feito à medida. É o entregável que transforma um cold contact numa conversa: dás valor antes de pedir seja o que for.
+Encontrar o lead é metade do caminho (isso é o módulo 1). A outra metade é chegar com algo na mão em vez de um "olá, presto serviços de marketing". Este módulo faz-te esse presente: analisa o negócio E a concorrência dele, aponta 3 problemas que lhe estão a custar clientes, mostra onde está à frente ou atrás de 2-3 concorrentes reais, e propõe um roadmap de ganhos rápidos + apostas maiores. Tudo embrulhado num `checkup.html` com a marca deles, para parecer feito à medida. É o entregável que transforma um cold contact numa conversa: dás valor antes de pedir seja o que for.
 
 É o módulo 2 de uma série modular. Sozinho, pega em qualquer negócio e dá-te o entregável. Encadeado com o módulo 1, audita automaticamente o melhor lead da tua lista.
 
@@ -52,21 +52,21 @@ Não precisas de nenhuma API. A auditoria vive de pesquisa web e páginas públi
 
 Dois ficheiros, na pasta `clientes/<slug>/`:
 
-- **`checkup.html`** - o entregável. Página única, autossuficiente (abre com duplo-clique, offline), com o logótipo e as cores do negócio. Estrutura: resumo → 3 problemas que custam dinheiro → 3 quick wins → "por onde eu começaria" (uma recomendação). É o que ofereces ao dono.
-- **`audit.md`** - a auditoria em texto (factos + evidência), a matéria-prima. É o que o módulo 3 lê para escrever a mensagem.
+- **`checkup.html`** — o entregável. Página única, autossuficiente (abre com duplo-clique, offline exceto o banner), com o logótipo e as cores do negócio. 3 separadores: **os teus números** (3 problemas + 3 quick wins), **concorrentes** (2-3 rivais reais com dados verificados) e **roadmap** (ganhos rápidos + apostas maiores). É o que ofereces ao dono.
+- **`audit.md`** — a auditoria em texto (factos + evidência + concorrentes), a matéria-prima. É o que o módulo 3 lê para escrever a mensagem.
 
 Vê a pasta [`exemplo/`](./exemplo/) para o formato exato.
 
 ## Precisa de pagar alguma coisa?
 
-**Não.** A auditoria usa só pesquisa web e páginas públicas (site, ficha do Google, Instagram). O plano grátis do Claude.ai chega. Se um dia quiseres dados de ficha do Google mais estruturados em volume, vê [`apis-opcionais.md`](./apis-opcionais.md), mas nunca precisas disso para começar.
+**Não.** A auditoria usa só pesquisa web e páginas públicas (site, ficha do Google, Instagram, Meta Ad Library). O plano grátis do Claude.ai chega. Se um dia quiseres dados de ficha do Google mais estruturados em volume, vê [`apis-opcionais.md`](./apis-opcionais.md), mas nunca precisas disso para começar.
 
 ## Regras (levadas a sério)
 
-- **Só factos com evidência.** Cada problema liga a um URL, um número ou uma data. O que não se consegue verificar fica "não consegui confirmar", nunca inventado.
+- **Só factos com evidência.** Cada problema liga a um URL, um número ou uma data. O que não se consegue verificar fica "não consegui confirmar" ou "n/d", nunca inventado, nem para o negócio nem para os concorrentes.
 - **O gap tem de doer no bolso.** Só entram problemas que custam clientes, não detalhes de gosto.
-- **É um presente, não um ataque.** O dono vai ler. Respeitoso, começa pelo que está bem.
-- **Nunca inventa um logótipo nem uma marca.** Se não conseguir extrair o branding, usa um cabeçalho neutro e honesto.
+- **É um presente, não um ataque.** O dono vai ler. Respeitoso, começa pelo que está bem. O mesmo vale para os concorrentes: descreve, não ridiculariza.
+- **Nunca inventa um logótipo, uma marca, nem um concorrente.** Se não conseguir extrair o branding, usa um cabeçalho neutro e honesto. Se só encontrar 1 concorrente relevante, entrega 1.
 
 ---
 
